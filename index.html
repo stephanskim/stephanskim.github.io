@@ -9,7 +9,36 @@
  p {
 	text-align: center;
 	}
+@keyframes slideInRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInRight {
+  animation-name: slideInRight;
+}
+@keyframes slideOutDown {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+.slideOutDown {
+  animation-name: slideOutDown;
+}
 </style>
-<p><a href="bio.html">Welcome!</a></p>
+<slideInRight>Welcome.</slideInRight>
+<slideOutDown>Welcome.</slideOutDown>
 </body>
 </html>
